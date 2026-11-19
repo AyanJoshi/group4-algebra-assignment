@@ -249,6 +249,7 @@ int main(int argc, char** argv) {
 
 	if (rank == 0)
         std::cout << "Computing det(A)\n" << std::flush;
+		MPI_Barrier(MPI_COMM_WORLD); //added a barrier to make sure every rank waits until all of them reach this line so all timers start from same moment
         start = MPI_Wtime();
         const auto det_a = determinant(a, MPI_COMM_WORLD);
 	if (rank == 0)
@@ -256,6 +257,7 @@ int main(int argc, char** argv) {
 
 	if (rank == 0)
         std::cout << "Computing det(B)\n" << std::flush;
+		MPI_Barrier(MPI_COMM_WORLD);
         start = MPI_Wtime();
         const auto det_b = determinant(b, MPI_COMM_WORLD);
 	if (rank == 0)
@@ -263,6 +265,7 @@ int main(int argc, char** argv) {
 
 	if (rank == 0)
         std::cout << "Computing det(C)\n" << std::flush;
+		MPI_Barrier(MPI_COMM_WORLD);
         start = MPI_Wtime();
         const auto det_c = determinant(c, MPI_COMM_WORLD);
 	if (rank == 0)

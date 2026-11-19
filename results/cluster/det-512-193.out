@@ -1,0 +1,72 @@
+=== sequential cached, 1 process ===
+Matrix dimension 512
+Seed 123456
+Field order 1331
+Modulus 4 + 1*x^1 + 1*x^3
+Generating A and B
+Generation seconds 0.036826
+Computing C = A * B
+Product seconds 4.023675
+Computing det(A)
+det(A) = 8 + 10*x^1 + 3*x^2
+Coefficients [8, 10, 3]
+Seconds 0.276102
+Computing det(B)
+det(B) = 7 + 6*x^1 + 4*x^2
+Coefficients [7, 6, 4]
+Seconds 0.277863
+Computing det(C)
+det(C) = 1*x^1 + 2*x^2
+Coefficients [0, 1, 2]
+Seconds 0.277707
+det(A) * det(B) = 1*x^1 + 2*x^2
+Identity verified true
+Total seconds 4.892422
+=== mpi efficient, 8 ranks ===
+Matrix dimension 512
+Seed 123456
+Field order 1331
+Modulus 4 + 1*x^1 + 1*x^3
+Generating A and B
+Generation seconds 0.063950
+Computing C = A * B
+Product seconds 5.963858
+Computing det(A)
+det(A) = 8 + 10*x^1 + 3*x^2
+Coefficients [8, 10, 3]
+Seconds 0.322903
+Computing det(B)
+det(B) = 7 + 6*x^1 + 4*x^2
+Coefficients [7, 6, 4]
+Seconds 0.316388
+Computing det(C)
+det(C) = 1*x^1 + 2*x^2
+Coefficients [0, 1, 2]
+Seconds 0.311500
+det(A) * det(B) = 1*x^1 + 2*x^2
+Identity verified true
+Total seconds 7.173357
+=== mpi inefficient, 8 ranks ===
+Matrix dimension 512
+Seed 123456
+Field order 1331
+Modulus 4 + 1*x^1 + 1*x^3
+Generating A and B
+Generation seconds 0.064877
+Computing C = A * B
+Product seconds 5.950978
+Computing det(A)
+det(A) = 8 + 10*x^1 + 3*x^2
+Coefficients [8, 10, 3]
+Seconds 1.039258
+Computing det(B)
+det(B) = 7 + 6*x^1 + 4*x^2
+Coefficients [7, 6, 4]
+Seconds 1.039030
+Computing det(C)
+det(C) = 1*x^1 + 2*x^2
+Coefficients [0, 1, 2]
+Seconds 1.059273
+det(A) * det(B) = 1*x^1 + 2*x^2
+Identity verified true
+Total seconds 9.297534

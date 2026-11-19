@@ -208,7 +208,7 @@ int main(int argc, char** argv) {
 
 	if (rank == 0)
         std::cout << "Computing det(C)\n" << std::flush;
-        MPI_Barrier(MPI_COMM_WORLD);s
+        MPI_Barrier(MPI_COMM_WORLD);
         start = MPI_Wtime();
         const auto det_c = determinant(c, MPI_COMM_WORLD);
 	if (rank == 0)
